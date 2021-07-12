@@ -1,23 +1,92 @@
+.bande{
+
+}
+.colonne{
+
+}
+.bleu{
+    background-color: blue;
+}
+
+.jaune{
+    background-color: yellow;
+}
+.vert{
+    background-color: green;
+}
+
+.blanc{
+    background-color: white;
+}
+.rouge{
+    background-color: red;
+}
 /* Drapeau de l'Ukraine */
 .ukraine {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
 
+.ukraine > .bande{
+    height: 50%;
 }
 
 /* --------------------*/
 
 /* Drapeau de l'Italie */
 .italie {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
 }
+.italie > .bande{
+    width: 33%;
+}
+
 /* --------------------*/
 
 
 /* Drapeau du Vietnam */
 .vietnam {
+    background-color: red;
+    
 }
+    
+.vietnam > img{
+    padding-top: 11%;
+}
+    
+    
+
 /* --------------------*/
 
 /* Drapeau du Bénin */
 .benin {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+   
+}
+.benin > .vert{
+    
+    height: 100%;
+    width: 40%;
+
+}
+.benin > .jaune{
+    
+    height : 50%;
+    width: 60%;
+
+}
+.benin > .rouge{
+    flex-direction: column;
+    height : 50%;
+    width: 60%;
+
 }
 /* --------------------*/
 
