@@ -38,9 +38,7 @@
 /* Drapeau de l'Italie */
 .italie {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: stretch;
+    
 }
 .italie > .bande{
     width: 33%;
@@ -51,91 +49,205 @@
 
 /* Drapeau du Vietnam */
 .vietnam {
-    background-color: red;
-    
+    display: flex;
+    background: #da251d;
+    /* Le drapeau est en flex et contient un élément, on utilise justify-content pour le centrer sur l'axe X et align-items sur l'axe Y */
+    justify-content: center;
+    align-items: center;
 }
-    
-.vietnam > img{
-    padding-top: 11%;
-}
-    
-    
-
 /* --------------------*/
 
 /* Drapeau du Bénin */
 .benin {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
+    
+    position: relative;
    
 }
 .benin > .vert{
-    
+    position: absolute;
     height: 100%;
     width: 40%;
+    left: 0;
+    top: 0;
+    bottom: 0;
 
 }
 .benin > .jaune{
     
     height : 50%;
-    width: 60%;
+    
 
 }
 .benin > .rouge{
-    flex-direction: column;
+    
     height : 50%;
-    width: 60%;
-
-}
+} 
 /* --------------------*/
 
 /* Drapeau de la Lettonie */
-.lettonie {
-
+.lettonie .rouge {
+    height: 40%;
 }
-
+.lettonie .blanc {
+    height: 20%;
+}
 /* --------------------*/
 
 /* Drapeau du  Pérou */
 .perou {
+    display: flex;
+    justify-content: space-between;
 }
-
+.perou .rouge{
+    height: 100%;
+    width: calc(100%/3);
+}
 /* --------------------*/
 
 /* Drapeau du Sénégal */
 .senegal {
+    display: flex;
+    flex-direction: row;
 }
+.senegal .bande{
+    height: 100%;
+    width: calc(100%/3);
+}
+.senegal .jaune{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
 /* --------------------*/
 
 /* Drapeau du Costa Rica */
 
 .costa_rica {
+    display: flex;
+    flex-direction: column;
 }
 /* --------------------*/
+.costa_rica .bande{
+    width: 100%;
+    flex-grow: 1;
+}
+.costa_rica .rouge{
+    flex-grow: 2;
+}
 
 
 /* Drapeau du Suriname */
 .suriname {
+    position: relative;
+}
+
+.suriname .vert {
+    background:#347f3d;
+    height: 20%;
+}
+
+.suriname .blanc {
+    background:#fff;
+    height: 10%;
+}
+.suriname .rouge {
+    background:#b60329;
+    height: 40%;
+
+    display: flex;
+    /* Toujours l'alignement ! */
+    justify-content: center;
+    align-items: center;
 }
 
 /* --------------------*/
 
 /* Drapeau du Chili */
 .chili {
+    position: absolute;
+}
+.chili .carre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 30%;
+    height: 50%;
+    bottom: 100%;
+    left: 0;
+}
+.chili .bande{
+    height: 50%;
+    top: 0;
+    left: 0;
 }
 /* --------------------*/
 
 /* Drapeau du Togo */
 
 .togo {
+    position: absolute;
+}
+.togo .bande{
+    height: 20%;
+}
+.togo .carre{
+    position: relative;
+    height: 60%;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    bottom: 100%;
 }
 /* --------------------*/
 
 /* Drapeau de la Grèce */ 
 
+/* Drapeau de la Grèce */ 
+
 .grece {
+    position: relative;
+}
+.grece .rayure {
+    height: calc(100% / 9);
+    width: 100%;
+}
+.grece .croix {
+position: absolute;
+background: #FFF;
+/* Le carré fait 5 barres sur 9, soit environ 55.5555% */
+height: 55.5555%;
+width: 35%;
+top: 0;
+left: 0;
+}
+.grece .bleu {
+    background: #0d5eaf;
+}
+.grece .croix .bleu {
+/* Chaque carré bleu autour de la croix fait 2 bandes de large. Si on ajoute la croix blanche, ça fait 5 bandes. Donc un carré vaut 40% de la hauteur. */
+height: 40%;
+width: 40%;
+position: absolute;
+}
+.grece .croix .bleu:nth-child(2) {
+    /* On place chaque carré à chaque coin */
+top: 0;
+right: 0;
 }
 
+.grece .croix .bleu:nth-child(3) {
+bottom: 0;
+right: 0;
+}
+
+.grece .croix .bleu:nth-child(4) {
+bottom: 0;
+left: 0;
+}
+
+/* ------------------*/
 /* ------------------*/
